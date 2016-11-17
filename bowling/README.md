@@ -9,3 +9,6 @@
 | Bowling alley (width) | 105 cm |1.05 | UP | 10:1 | 10.5 |
 | Bowling alley (length) | 18 m | 18 | UP | 10:1 | 180 |
 
+## Screenshot
+
+![Bowling alley](./bowling-alley/bowling-alley.png)
