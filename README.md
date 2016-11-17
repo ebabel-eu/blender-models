@@ -4,6 +4,12 @@
 
 ## Screenshots
 
+### Bowling alley
+
+![Bowling alley](./bowling/bowling-alley/bowling-alley.png)
+
+### Mayan temple
+
 ![Mayan temple screenshot](./mayan-temple/screenshots/improved-roof-and-stairs.png)
 
 ## Copyright
