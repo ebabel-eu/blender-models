@@ -2,32 +2,14 @@
 
 ## Scaling
 
-### Easiest scaling from the course
-
-| Object | Real size | Meters | Scaling | Ratio | Blender units |
-| --- | --- | --- | --- | --- | --- |
-| king (height) | 9.5 cm | 0.95 m | UP | ? | ? |
-| king (base diameter) | 4.5 cm | 0.45 m | UP | ? | ? |
-| single chessboard square (diameter) | 6 cm | 0.06 m | UP | ? | ? |
-| chessboard, no edge (diameter) | 48 cm | 0.48 m | UP | ? | ? |
-| queen, rooks, bishops and knights (base diameter) | 4 cm | 0.04 m | UP | ? | ? |
-| pawns | 3 cm | 0.03 m | UP | ? | ? |
-
-
-### Scaling based on my research (awkward measures)
-
-| Object | Real size | Meters | Scaling | Ratio | Blender units |
-| --- | --- | --- | --- | --- | --- |
-| king (height) | 102 mm | 0.102 m | UP | 20:1 | 2 |
-| king (diameter) | 51 mm | 0.051 m | UP | 20:1 | 1 |
-| single chessboard square (diameter) | 63.75 mm | 0.06375 m | UP | 20:1 | 1.3 |
-| chessboard, no edge (diameter) | 510 mm | 0.510 m | UP | 20:1 | 10.2 |
-
-## Standard size of chessboard and pieces
-
- For actual play, pieces of the Staunton chess set design are standard. The height of the king should be between 3.35 to 4.13 inches (85 to 105 millimetres). United States Chess Federation rules call for a king height between 3.375 and 4.5 inches (86 to 114 mm). A height of about 3.75 to 4 inches (95 to 102 millimetres) is preferred by most players. The diameter of the king should be 40–50% of its height. The size of the other pieces should be in proportion to the king. The pieces should be well balanced. The length of the sides of the squares of the chessboard should be about 1.25–1.3 times the diameter of the base of the king, or 2 to 2.5 inches (51 to 64 millimetres). Squares of about 2.25 inches (57 mm) are normally well suited for pieces with the kings in the preferred size range.
-
-Source: [Wikipedia](https://en.wikipedia.org/wiki/Chess_piece)
+| Object | Real size | Ratio | Blender units |
+| --- | --- | --- | --- |
+| king (height) | 9.5 cm | 5:1 | 4.75 |
+| king (base diameter) | 4.5 cm | 5:1 | 2.25 |
+| single chessboard square (diameter) | 6 cm | 5:1 | 0.3 |
+| chessboard, no edge (diameter) | 48 cm | 5:1 | ? |
+| queen, rooks, bishops and knights (base diameter) | 4 cm | 5:1 | ? |
+| pawns | 3 cm | 5:1 | ? |
 
 ## Screenshot
 
