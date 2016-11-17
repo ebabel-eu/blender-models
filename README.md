@@ -20,5 +20,5 @@ Feel free to copy and re-use the .blend files I made for any purpose, with or wi
 
 ### Various copyright on the assets
 
-The non .blend files may be copyright. I found these on Google Images and the Udemy course I followed, so their presence in this repository doesn't give you any rights on them. If you want to use them, you should chase down where they are from and whether it's possible to use them. Let me know if you do: hello@ebabel.eu
+The non .blend files may be copyright. I found these on Google Images and the [Udemy course](https://www.udemy.com/blendertutorial/) I followed, so their presence in this repository doesn't give you any rights on them. If you want to use them, you should chase down where they are from and whether it's possible to use them. Let me know if you do: hello@ebabel.eu
 
