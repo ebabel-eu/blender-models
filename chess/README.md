@@ -11,7 +11,7 @@
 | queen, rooks, bishops and knights (base diameter) | 4 cm | 1:1 | 4 |
 | pawns | 3 cm | 1:1 | 3 |
 
-## Screenshot
+## Screenshots
 
 ![pawn](./screenshots/pawn.png)
 
