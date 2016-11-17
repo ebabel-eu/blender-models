@@ -4,7 +4,7 @@
 
 ## Screenshots
 
-### Bowling alley
+### [Bowling alley](./bowling)
 
 ![Bowling alley](./bowling/bowling-alley/bowling-alley.png)
 
