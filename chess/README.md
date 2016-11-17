@@ -5,9 +5,9 @@
 | Object | Real size | Meters | Scaling | Ratio | Blender units |
 | --- | --- | --- | --- | --- | --- |
 | king (height) | 102 mm | 0.102 m | UP | 20:1 | 2 |
-| king (diameter) | 51 mm | 0.51 m | UP | 20:1 | 1 |
-| single chessboard square (diameter) | ? | ? | ? | ? | ? |
-| chessboard (diameter) | ? | ? | ? | ? | ? |
+| king (diameter) | 51 mm | 0.051 m | UP | 20:1 | 1 |
+| single chessboard square (diameter) | 63.75 mm | 0.06375 m | UP | 20:1 | 1.3 |
+| chessboard, no edge (diameter) | 510 mm | 0.510 m | UP | 20:1 | 10.2 |
 | queen | ? | ? | ? | ? | ? |
 | rooks | ? | ? | ? | ? | ? |
 | bishops | ? | ? | ? | ? | ? |
