@@ -6,12 +6,12 @@
 
 | Object | Real size | Meters | Scaling | Ratio | Blender units |
 | --- | --- | --- | --- | --- | --- |
-| king (height) | 9.5 cm | 0.95 m | UP | ? | ? |
-| king (base diameter) | 4.5 cm | 0.45 m | UP | ? | ? |
-| single chessboard square (diameter) | 6 cm | 0.06 m | UP | ? | ? |
-| chessboard, no edge (diameter) | 48 cm | 0.48 m | UP | ? | ? |
-| queen, rooks, bishops and knights (base diameter) | 4 cm | 0.04 | UP | ? | ? |
-| pawns | 3 cm | 0.03 | UP | ? | ? |
+| king (height) | 9.5 cm | 0.095 m | UP | ? | ? |
+| king (base diameter) | 4.5 cm | 0.045 m | UP | ? | ? |
+| single chessboard square (diameter) | 6 cm | 0.006 m | UP | ? | ? |
+| chessboard, no edge (diameter) | 48 cm | 0.048 m | UP | ? | ? |
+| queen, rooks, bishops and knights (base diameter) | 4 cm | 0.004 m | UP | ? | ? |
+| pawns | 3 cm | 0.003 m | UP | ? | ? |
 
 
 ### Scaling based on my research (awkward measures)
