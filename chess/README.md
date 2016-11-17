@@ -13,5 +13,7 @@
 
 ## Screenshot
 
+![pawn](./screenshots/pawn.png)
+
 ![draft chessboard](./screenshots/chessboard.png)
 

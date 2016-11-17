@@ -5,6 +5,9 @@
 ## Screenshots
 
 ### [Chess](./chess)
+
+![pawn](./chess/screenshots/pawn.png)
+
 ![draft chessboard](./chess/screenshots/chessboard.png)
 
 ### [Bowling alley](./bowling)
