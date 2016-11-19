@@ -13,7 +13,7 @@
 
 ## Screenshots
 
-![low poly bishop](./screenshots/low-poly-bishop.png)
+![bishop and pawn render in scene](./screenshots/chessboard-with-bishop-and-pawn-render.png)
 
 ![low poly pawn render in scene](./screenshots/pawn-render.png)
 
