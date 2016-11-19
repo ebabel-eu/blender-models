@@ -13,6 +13,8 @@
 
 ## Screenshots
 
+![low poly bishop](./screenshots/low-poly-bishop.png)
+
 ![low poly pawn render in scene](./screenshots/pawn-render.png)
 
 ![low poly pawn](./screenshots/low-poly-pawn.png)
