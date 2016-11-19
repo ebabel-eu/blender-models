@@ -13,6 +13,8 @@
 
 ## Screenshots
 
+![two bishops and eight pawns with lighting](./screenshots/chessboard-with-bishop-and-pawn-render-v3.png)
+
 ![two bishops and eight pawns](./screenshots/two-bishops-and-eight-pawns.png)
 
 ![bishop and pawn render in scene](./screenshots/chessboard-with-bishop-and-pawn-render-v2.png)
