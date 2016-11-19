@@ -6,6 +6,8 @@
 
 ### [Chess](./chess)
 
+![low poly bishop](./chess/screenshots/low-poly-bishop.png)
+
 ![pawn](./chess/screenshots/pawn.png)
 
 ![draft chessboard](./chess/screenshots/chessboard.png)
