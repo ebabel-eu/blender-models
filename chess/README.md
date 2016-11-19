@@ -13,6 +13,8 @@
 
 ## Screenshots
 
+![low poly pawn](./screenshots/low-poly-pawn.png)
+
 ![pawn](./screenshots/pawn.png)
 
 ![draft chessboard](./screenshots/chessboard.png)
