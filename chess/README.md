@@ -13,6 +13,8 @@
 
 ## Screenshots
 
+![low poly pawn render in scene](./screenshots/pawn-render.png)
+
 ![low poly pawn](./screenshots/low-poly-pawn.png)
 
 ![pawn](./screenshots/pawn.png)
