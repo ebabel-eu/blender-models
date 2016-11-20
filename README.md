@@ -6,6 +6,10 @@
 
 ### [Chess](./chess)
 
+#### White queen on the chessboard
+
+![White queen on the chessboard](./chess/screenshots/white-queen-on-the-chessboard.png)
+
 #### Procedural marble on chessboard
 
 ![Procedural marble on chessboard](./chess/screenshots/marble-textured-chessboard.png)
