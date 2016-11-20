@@ -13,25 +13,51 @@
 
 ## Screenshots
 
+### Procedural textures for black and white squares
+
+![Procedural textures for black and white squares](./screenshots/chessboard-with-bishop-and-pawn-render-v8.png)
+
+### Brazilian rosewood texture surround
+
 ![Brazilian rosewood texture](./screenshots/chessboard-with-bishop-and-pawn-render-v7.png)
+
+### High poly with subsurface division modifier, custom material diffuse and specular
 
 ![high poly with subsurface division modifier, custom material diffuse and specular](./screenshots/chessboard-with-bishop-and-pawn-render-v6.png)
 
+### High poly with subsurface division modifier
+
 ![high poly with subsurface division modifier](./screenshots/chessboard-with-bishop-and-pawn-render-v5.png)
+
+### Two bishops and eight pawns with lighting, cycles render
 
 ![two bishops and eight pawns with lighting, cycles render](./screenshots/chessboard-with-bishop-and-pawn-render-v4.png)
 
+### Two bishops and eight pawns with lighting, blender render
+
 ![two bishops and eight pawns with lighting, blender render](./screenshots/chessboard-with-bishop-and-pawn-render-v3.png)
+
+### Two bishops and eight pawns
 
 ![two bishops and eight pawns](./screenshots/two-bishops-and-eight-pawns.png)
 
+### Bishop and pawn render in scene
+
 ![bishop and pawn render in scene](./screenshots/chessboard-with-bishop-and-pawn-render-v2.png)
+
+### Low poly pawn render in scene
 
 ![low poly pawn render in scene](./screenshots/pawn-render.png)
 
+### Low poly pawn
+
 ![low poly pawn](./screenshots/low-poly-pawn.png)
 
+### Pawn
+
 ![pawn](./screenshots/pawn.png)
+
+### Draft chessboard
 
 ![draft chessboard](./screenshots/chessboard.png)
 
