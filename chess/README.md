@@ -13,6 +13,8 @@
 
 ## Screenshots
 
+![high poly with subsurface division modifier, custom material diffuse and specular](./screenshots/chessboard-with-bishop-and-pawn-render-v6.png)
+
 ![high poly with subsurface division modifier](./screenshots/chessboard-with-bishop-and-pawn-render-v5.png)
 
 ![two bishops and eight pawns with lighting, cycles render](./screenshots/chessboard-with-bishop-and-pawn-render-v4.png)
