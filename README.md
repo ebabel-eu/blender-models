@@ -6,11 +6,21 @@
 
 ### [Chess](./chess)
 
-![low poly bishop](./chess/screenshots/low-poly-bishop.png)
+#### Procedural marble on chessboard
 
-![pawn](./chess/screenshots/pawn.png)
+![Procedural marble on chessboard](./chess/screenshots/marble-textured-chessboard.png)
 
-![draft chessboard](./chess/screenshots/chessboard.png)
+#### Low poly bishop
+
+![Low poly bishop](./chess/screenshots/low-poly-bishop.png)
+
+#### Pawn
+
+![Pawn](./chess/screenshots/pawn.png)
+
+#### Draft chessboard
+
+![Draft chessboard](./chess/screenshots/chessboard.png)
 
 ### [Bowling alley](./bowling)
 
