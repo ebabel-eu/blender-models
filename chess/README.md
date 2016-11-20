@@ -13,6 +13,14 @@
 
 ## Screenshots
 
+### Queen, Bishops and Pawns
+
+![Queen, Bishops and Pawns](./screenshots/chessboard-with-bishop-and-pawn-render-v9.png)
+
+### Low poly queen
+
+![low poly queen](./screenshots/low-poly-queen.png)
+
 ### Procedural textures for black and white squares
 
 ![Procedural textures for black and white squares](./screenshots/chessboard-with-bishop-and-pawn-render-v8.png)
