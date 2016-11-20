@@ -13,6 +13,8 @@
 
 ## Screenshots
 
+![Brazilian rosewood texture](./screenshots/chessboard-with-bishop-and-pawn-render-v7.png)
+
 ![high poly with subsurface division modifier, custom material diffuse and specular](./screenshots/chessboard-with-bishop-and-pawn-render-v6.png)
 
 ![high poly with subsurface division modifier](./screenshots/chessboard-with-bishop-and-pawn-render-v5.png)
