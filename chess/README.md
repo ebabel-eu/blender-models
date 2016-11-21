@@ -13,6 +13,10 @@
 
 ## Screenshots
 
+### Queen, Bishops, Knight and Pawns
+
+![Queen, Bishops, Knight and Pawns](./screenshots/chessboard-with-bishop-and-pawn-render-v10.png)
+
 ### Queen, Bishops and Pawns
 
 ![Queen, Bishops and Pawns](./screenshots/chessboard-with-bishop-and-pawn-render-v9.png)
