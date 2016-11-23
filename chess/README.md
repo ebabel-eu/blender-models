@@ -13,6 +13,15 @@
 
 ## Screenshots
 
+### All white pieces: King, Queen, Bishops, Knight, Rook and Pawns
+
+![All white pieces: King, Queen, Bishops, Knight, Rook and Pawns](./screenshots/chessboard-with-bishop-and-pawn-render-v13.png)
+
+
+### Low poly king
+
+![low poly king](./screenshots/low-poly-king.png)
+
 ### Improved the Knight and placed among the other white pieces
 
 ![Improved the Knight and placed among the other white pieces](./screenshots/chessboard-with-bishop-and-pawn-render-v12.png)
