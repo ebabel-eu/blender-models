@@ -13,6 +13,10 @@
 
 ## Screenshots
 
+### Improved the Knight and placed among the other white pieces
+
+![Improved the Knight and placed among the other white pieces](./screenshots/chessboard-with-bishop-and-pawn-render-v12.png)
+
 ### Queen, Bishops, Knight, Rook and Pawns
 
 ![Queen, Bishops, Knight, Rook and Pawns](./screenshots/chessboard-with-bishop-and-pawn-render-v11.png)
