@@ -13,9 +13,21 @@
 
 ## Screenshots
 
+### Queen, Bishops, Knight, Rook and Pawns
+
+![Queen, Bishops, Knight, Rook and Pawns](./screenshots/chessboard-with-bishop-and-pawn-render-v11.png)
+
+### Low poly rook
+
+![low poly rook](./screenshots/low-poly-rook.png)
+
 ### Queen, Bishops, Knight and Pawns
 
 ![Queen, Bishops, Knight and Pawns](./screenshots/chessboard-with-bishop-and-pawn-render-v10.png)
+
+### Low poly knight
+
+![low poly knight](./screenshots/low-poly-knight.png)
 
 ### Queen, Bishops and Pawns
 
