@@ -13,6 +13,10 @@
 
 ## Screenshots
 
+### Black pieces (focus on black knight)
+
+![Black pieces](./screenshots/chessboard-with-bishop-and-pawn-render-v17.png)
+
 ### All white pieces: King, Queen, Bishops, Knight, Rook and Pawns
 
 ![All white pieces: King, Queen, Bishops, Knight, Rook and Pawns](./screenshots/chessboard-with-bishop-and-pawn-render-v13.png)
