@@ -9,9 +9,9 @@ animate();
 
 var loader = new THREE.JSONLoader();
 loader.load(
-  './chess-scene.json',
+  './chessboard.json',
   function (geometry, materials) {
-    var material = new THREE.MeshFaceMaterial(materials);
+    var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
     var object = new THREE.Mesh(geometry, material);
     scene.add(object);
   }
