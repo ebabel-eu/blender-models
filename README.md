@@ -12,23 +12,15 @@ These models can be seen as web pages on https://ebabel-eu.github.io/blender-mod
 
 #### White queen on the chessboard
 
-![White queen on the chessboard](./chess/screenshots/white-queen-on-the-chessboard.png)
+![White queen on the chessboard](./chess/renders/white-queen-on-the-chessboard.png)
 
 #### Procedural marble on chessboard
 
-![Procedural marble on chessboard](./chess/screenshots/marble-textured-chessboard.png)
+![Procedural marble on chessboard](./chess/renders/marble-textured-chessboard.png)
 
 #### Low poly bishop
 
-![Low poly bishop](./chess/screenshots/low-poly-bishop.png)
-
-#### Pawn
-
-![Pawn](./chess/screenshots/pawn.png)
-
-#### Draft chessboard
-
-![Draft chessboard](./chess/screenshots/chessboard.png)
+![Low poly bishop](./chess/renders/low-poly-bishop.png)
 
 ### [Bowling alley](./bowling)
 
