@@ -2,6 +2,10 @@
 
 [Learning Blender with Udemy](https://www.udemy.com/blendertutorial/) and publishing my models in this public repository.
 
+## Static demos
+
+These models can be seen as web pages on https://ebabel-eu.github.io/blender-models/
+
 ## Screenshots
 
 ### [Chess](./chess)
