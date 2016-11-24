@@ -31,7 +31,7 @@ function init() {
   container.appendChild( renderer.domElement );
 
   camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 1, 1000 );
-  camera.position.z = 500;
+  camera.position.z = 55;
 
   controls = new THREE.OrbitControls( camera, renderer.domElement );
   controls.enableDamping = true;
@@ -40,7 +40,7 @@ function init() {
 
   // world
 
-  var geometry = new THREE.CylinderGeometry( 0, 10, 30, 4, 1 );
+  var geometry = new THREE.CylinderGeometry( 0, 10, 30, 8, 1 );
   var material =  new THREE.MeshPhongMaterial( { color:0xffffff, shading: THREE.FlatShading } );
 
   for ( var i = 0; i < 50; i ++ ) {
