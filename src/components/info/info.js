@@ -4,6 +4,6 @@ import './info.scss';
 
 export default class Info extends Component {
   render() {
-    return <p className="info">Use your left or right mouse buttons and drag it to around in 3D.</p>;
+    return <p className="info">To move, use your left or right mouse buttons and drag it. Scroll to zoom.</p>;
   }
 }

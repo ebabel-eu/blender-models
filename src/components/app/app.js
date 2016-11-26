@@ -36,13 +36,13 @@ const init = () => {
   scene.add(light);
 
   // Light 2.
-  light = new THREE.DirectionalLight(0xffffff, 2);
-  light.position.set(-100, 100, 100);
+  light = new THREE.DirectionalLight(0xffffff, 1);
+  light.position.set(-100, 200, 200);
   light.castShadow = true;
   scene.add(light);
 
   // Hemisphere light.
-  light = new THREE.HemisphereLight( 0xffffbb, 0x080820, 1 );
+  light = new THREE.HemisphereLight(0xffffbb, 0x080820, 1);
   scene.add(light);
 
   // Enable shadow rendering.
