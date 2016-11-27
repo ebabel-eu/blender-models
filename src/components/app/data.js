@@ -9,7 +9,7 @@ module.exports = {
     // Chessboard.
     {
       g: './models/chessboard.json',
-      m: 0x0000FF,
+      m: 0xa0522d,
       cs: false,
       rs: true,
     },
@@ -17,7 +17,7 @@ module.exports = {
     // Whites.
     {
       g: './models/rook.json',
-      m: 0xFF7F00,
+      m: 0xFFCC8A,
       cs: true,
       rs: false,
       x: -21,
@@ -25,7 +25,7 @@ module.exports = {
     },
     {
       g: './models/rook.json',
-      m: 0xFF7F00,
+      m: 0xFFCC8A,
       cs: true,
       rs: false,
       x: -21,
@@ -33,7 +33,7 @@ module.exports = {
     },
     {
       g: './models/knight.json',
-      m: 0xFFFF00,
+      m: 0xFFCC8A,
       cs: true,
       rs: false,
       x: -21,
@@ -42,7 +42,7 @@ module.exports = {
     },
     {
       g: './models/knight.json',
-      m: 0xFFFF00,
+      m: 0xFFCC8A,
       cs: true,
       rs: false,
       x: -21,
@@ -51,7 +51,7 @@ module.exports = {
     },
     {
       g: './models/bishop.json',
-      m: 0x00FF00,
+      m: 0xFFCC8A,
       cs: true,
       rs: false,
       x: -21,
@@ -59,7 +59,7 @@ module.exports = {
     },
     {
       g: './models/bishop.json',
-      m: 0x00FF00,
+      m: 0xFFCC8A,
       cs: true,
       rs: false,
       x: -21,
@@ -67,7 +67,7 @@ module.exports = {
     },
     {
       g: './models/king.json',
-      m: 0x4B0082,
+      m: 0xFFCC8A,
       cs: true,
       rs: false,
       x: -21,
@@ -75,7 +75,7 @@ module.exports = {
     },
     {
       g: './models/queen.json',
-      m: 0x9400D3,
+      m: 0xFFCC8A,
       cs: true,
       rs: false,
       x: -21,
@@ -83,7 +83,7 @@ module.exports = {
     },
     {
       g: './models/pawn.json',
-      m: 0xFF0000,
+      m: 0xFFCC8A,
       cs: true,
       rs: false,
       x: -15,
@@ -91,7 +91,7 @@ module.exports = {
     },
     {
       g: './models/pawn.json',
-      m: 0xFF0000,
+      m: 0xFFCC8A,
       cs: true,
       rs: false,
       x: -15,
@@ -99,7 +99,7 @@ module.exports = {
     },
     {
       g: './models/pawn.json',
-      m: 0xFF0000,
+      m: 0xFFCC8A,
       cs: true,
       rs: false,
       x: -15,
@@ -107,7 +107,7 @@ module.exports = {
     },
     {
       g: './models/pawn.json',
-      m: 0xFF0000,
+      m: 0xFFCC8A,
       cs: true,
       rs: false,
       x: -15,
@@ -115,7 +115,7 @@ module.exports = {
     },
     {
       g: './models/pawn.json',
-      m: 0xFF0000,
+      m: 0xFFCC8A,
       cs: true,
       rs: false,
       x: -15,
@@ -123,7 +123,7 @@ module.exports = {
     },
     {
       g: './models/pawn.json',
-      m: 0xFF0000,
+      m: 0xFFCC8A,
       cs: true,
       rs: false,
       x: -15,
@@ -131,7 +131,7 @@ module.exports = {
     },
     {
       g: './models/pawn.json',
-      m: 0xFF0000,
+      m: 0xFFCC8A,
       cs: true,
       rs: false,
       x: -15,
@@ -139,7 +139,7 @@ module.exports = {
     },
     {
       g: './models/pawn.json',
-      m: 0xFF0000,
+      m: 0xFFCC8A,
       cs: true,
       rs: false,
       x: -15,
@@ -149,7 +149,7 @@ module.exports = {
     // Blacks.
     {
       g: './models/rook.json',
-      m: 0xFF7F00,
+      m: 0x2E100D,
       cs: true,
       rs: false,
       x: 21,
@@ -157,7 +157,7 @@ module.exports = {
     },
     {
       g: './models/rook.json',
-      m: 0xFF7F00,
+      m: 0x2E100D,
       cs: true,
       rs: false,
       x: 21,
@@ -165,7 +165,7 @@ module.exports = {
     },
     {
       g: './models/knight.json',
-      m: 0xFFFF00,
+      m: 0x2E100D,
       cs: true,
       rs: false,
       x: 21,
@@ -174,7 +174,7 @@ module.exports = {
     },
     {
       g: './models/knight.json',
-      m: 0xFFFF00,
+      m: 0x2E100D,
       cs: true,
       rs: false,
       x: 21,
@@ -183,7 +183,7 @@ module.exports = {
     },
     {
       g: './models/bishop.json',
-      m: 0x00FF00,
+      m: 0x2E100D,
       cs: true,
       rs: false,
       x: 21,
@@ -191,7 +191,7 @@ module.exports = {
     },
     {
       g: './models/bishop.json',
-      m: 0x00FF00,
+      m: 0x2E100D,
       cs: true,
       rs: false,
       x: 21,
@@ -199,7 +199,7 @@ module.exports = {
     },
     {
       g: './models/king.json',
-      m: 0x4B0082,
+      m: 0x2E100D,
       cs: true,
       rs: false,
       x: 21,
@@ -207,7 +207,7 @@ module.exports = {
     },
     {
       g: './models/queen.json',
-      m: 0x9400D3,
+      m: 0x2E100D,
       cs: true,
       rs: false,
       x: 21,
@@ -215,7 +215,7 @@ module.exports = {
     },
     {
       g: './models/pawn.json',
-      m: 0xFF0000,
+      m: 0x2E100D,
       cs: true,
       rs: false,
       x: 15,
@@ -223,7 +223,7 @@ module.exports = {
     },
     {
       g: './models/pawn.json',
-      m: 0xFF0000,
+      m: 0x2E100D,
       cs: true,
       rs: false,
       x: 15,
@@ -231,7 +231,7 @@ module.exports = {
     },
     {
       g: './models/pawn.json',
-      m: 0xFF0000,
+      m: 0x2E100D,
       cs: true,
       rs: false,
       x: 15,
@@ -239,7 +239,7 @@ module.exports = {
     },
     {
       g: './models/pawn.json',
-      m: 0xFF0000,
+      m: 0x2E100D,
       cs: true,
       rs: false,
       x: 15,
@@ -247,7 +247,7 @@ module.exports = {
     },
     {
       g: './models/pawn.json',
-      m: 0xFF0000,
+      m: 0x2E100D,
       cs: true,
       rs: false,
       x: 15,
@@ -255,7 +255,7 @@ module.exports = {
     },
     {
       g: './models/pawn.json',
-      m: 0xFF0000,
+      m: 0x2E100D,
       cs: true,
       rs: false,
       x: 15,
@@ -263,7 +263,7 @@ module.exports = {
     },
     {
       g: './models/pawn.json',
-      m: 0xFF0000,
+      m: 0x2E100D,
       cs: true,
       rs: false,
       x: 15,
@@ -271,7 +271,7 @@ module.exports = {
     },
     {
       g: './models/pawn.json',
-      m: 0xFF0000,
+      m: 0x2E100D,
       cs: true,
       rs: false,
       x: 15,
