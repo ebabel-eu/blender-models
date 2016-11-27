@@ -39,11 +39,6 @@ const buildGui = () => {
     threeRender();
   }, false, 100, 500);
 
-  addGui('light penumbra', light.penumbra, val => {
-    light.penumbra = val;
-    threeRender();
-  }, false, 0, 1);
-
   addGui('light decay', light.decay, val => {
     light.decay = val;
     threeRender();
@@ -63,6 +58,11 @@ const buildGui = () => {
     light.position.z = val;
     threeRender();
   }, false, -80, 80);
+
+  addGui('fog density', scene.fog.density, val => {
+    scene.fog.density = val;
+    threeRender();
+  }, false, 0.01, 0.05);
 
 }
 
@@ -108,7 +108,7 @@ const init = () => {
 
   // Light.
   light = new THREE.SpotLight(0xffffff, 2);
-  light.position.set(10, 41, -2);
+  light.position.set(10, 41, -42);
   light.castShadow = true;
   light.angle = Math.PI / 4;
   light.penumbra = 0.39;
