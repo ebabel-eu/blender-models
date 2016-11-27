@@ -23,10 +23,47 @@ const clearGui = () => {
 
 const buildGui = () => {
   clearGui();
+
   addGui('light color', light.color.getHex(), val => {
     light.color.setHex(val);
     threeRender();
   }, true);
+
+  addGui('light intensity', light.intensity, val => {
+    light.intensity = val;
+    threeRender();
+  }, false, 0, 5);
+
+  addGui('light distance', light.distance, val => {
+    light.distance = val;
+    threeRender();
+  }, false, 100, 500);
+
+  addGui('light penumbra', light.penumbra, val => {
+    light.penumbra = val;
+    threeRender();
+  }, false, 0, 1);
+
+  addGui('light decay', light.decay, val => {
+    light.decay = val;
+    threeRender();
+  }, false, 0, 10);
+
+  addGui('light x', light.position.x, val => {
+    light.position.x = val;
+    threeRender();
+  }, false, -80, 80);
+
+  addGui('light y', light.position.y, val => {
+    light.position.y = val;
+    threeRender();
+  }, false, -80, 80);
+
+  addGui('light z', light.position.z, val => {
+    light.position.z = val;
+    threeRender();
+  }, false, -80, 80);
+
 }
 
 const addGui = (name, value, callback, isColor, min, max) => {
@@ -71,10 +108,10 @@ const init = () => {
 
   // Light.
   light = new THREE.SpotLight(0xffffff, 2);
-  light.position.set(15, 40, 35);
+  light.position.set(10, 41, -2);
   light.castShadow = true;
   light.angle = Math.PI / 4;
-  light.penumbra = 0.05;
+  light.penumbra = 0.39;
   light.decay = 2;
   light.distance = 200;
   light.shadow.mapSize.width = 1024;
