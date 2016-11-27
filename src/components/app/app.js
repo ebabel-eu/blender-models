@@ -10,6 +10,46 @@ let scene;
 let renderer;
 let light;
 
+// Dat GUI
+let gui;
+let guiElements;
+const param = {color: '0xffffff'};
+
+const clearGui = () => {
+  if ( gui ) gui.destroy();
+  gui = new dat.GUI();
+  gui.open();
+}
+
+const buildGui = () => {
+  clearGui();
+  addGui('light color', light.color.getHex(), val => {
+    light.color.setHex(val);
+    threeRender();
+  }, true);
+}
+
+const addGui = (name, value, callback, isColor, min, max) => {
+  let node;
+  param[name] = value;
+
+  if (isColor) {
+    node = gui.addColor(param, name).onChange(() => {
+      callback(param[name]);
+    });
+  } else if (typeof value == 'object') {
+    node = gui.add(param, name, value).onChange(() => {
+      callback(param[name]);
+    });
+  } else {
+    node = gui.add(param, name, min, max).onChange(() => {
+      callback(param[name]);
+    });
+  }
+
+  return node;
+}
+
 const init = () => {
   scene = new THREE.Scene();
   scene.fog = new THREE.FogExp2(0x7ec0ee, 0.02);
@@ -89,7 +129,7 @@ export default class App extends Component {
   componentDidMount() {
     data.models.map(model => {
       loader.load(model.g, (geometry, materials) => {
-        const material = new THREE.MeshLambertMaterial({
+        const material = new THREE.MeshPhongMaterial({
           color: model.m,
         });
 
@@ -107,6 +147,7 @@ export default class App extends Component {
 
     init();
     animate();
+    buildGui();
   }
 
   render() {
