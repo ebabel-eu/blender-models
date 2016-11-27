@@ -10,7 +10,7 @@ module.exports = {
     {
       g: './models/chessboard.json',
       m: 0xa0522d,
-      cs: false,
+      cs: true,
       rs: true,
     },
 
