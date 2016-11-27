@@ -21,8 +21,28 @@ module.exports = {
       rs: false,
     },
     {
+      g: './models/rook.json',
+      m: 0xFF7F00,
+      cs: false,
+      rs: false,
+      z: -42,
+    },
+    {
       g: './models/knight.json',
       m: 0xFFFF00,
+      cs: true,
+      rs: true,
+    },
+    {
+      g: './models/knight.json',
+      m: 0xFFFF00,
+      cs: true,
+      rs: true,
+      z: -30,
+    },
+    {
+      g: './models/bishop.json',
+      m: 0x00FF00,
       cs: true,
       rs: true,
     },
@@ -31,6 +51,7 @@ module.exports = {
       m: 0x00FF00,
       cs: true,
       rs: true,
+      z: -18,
     },
     {
       g: './models/king.json',
@@ -49,6 +70,55 @@ module.exports = {
       m: 0xFF0000,
       cs: true,
       rs: true,
+    },
+    {
+      g: './models/pawn.json',
+      m: 0xFF0000,
+      cs: true,
+      rs: true,
+      z: -6,
+    },
+    {
+      g: './models/pawn.json',
+      m: 0xFF0000,
+      cs: true,
+      rs: true,
+      z: -12,
+    },
+    {
+      g: './models/pawn.json',
+      m: 0xFF0000,
+      cs: true,
+      rs: true,
+      z: -18,
+    },
+    {
+      g: './models/pawn.json',
+      m: 0xFF0000,
+      cs: true,
+      rs: true,
+      z: -24,
+    },
+    {
+      g: './models/pawn.json',
+      m: 0xFF0000,
+      cs: true,
+      rs: true,
+      z: -30,
+    },
+    {
+      g: './models/pawn.json',
+      m: 0xFF0000,
+      cs: true,
+      rs: true,
+      z: -36,
+    },
+    {
+      g: './models/pawn.json',
+      m: 0xFF0000,
+      cs: true,
+      rs: true,
+      z: -42,
     },
 
     // Blacks.
@@ -64,7 +134,6 @@ module.exports = {
       m: 0xFF7F00,
       cs: true,
       rs: true,
-
       x: 42,
       z: -42,
     },
@@ -73,7 +142,6 @@ module.exports = {
       m: 0xFFFF00,
       cs: true,
       rs: true,
-
       x: 42,
     },
     {
@@ -81,7 +149,6 @@ module.exports = {
       m: 0xFFFF00,
       cs: true,
       rs: true,
-
       x: 42,
       z: -30,
     },
@@ -90,7 +157,6 @@ module.exports = {
       m: 0x00FF00,
       cs: true,
       rs: true,
-
       x: 42,
     },
     {
@@ -98,7 +164,6 @@ module.exports = {
       m: 0x00FF00,
       cs: true,
       rs: true,
-
       x: 42,
       z: -18,
     },
@@ -107,7 +172,6 @@ module.exports = {
       m: 0x4B0082,
       cs: true,
       rs: true,
-
       x: 42,
     },
     {
@@ -115,7 +179,6 @@ module.exports = {
       m: 0x9400D3,
       cs: true,
       rs: true,
-
       x: 42,
     },
     {
@@ -123,7 +186,6 @@ module.exports = {
       m: 0xFF0000,
       cs: true,
       rs: true,
-
       x: 30,
     },
     {
@@ -131,7 +193,6 @@ module.exports = {
       m: 0xFF0000,
       cs: true,
       rs: true,
-
       x: 30,
       z: -6,
     },
@@ -140,7 +201,6 @@ module.exports = {
       m: 0xFF0000,
       cs: true,
       rs: true,
-
       x: 30,
       z: -12,
     },
@@ -149,7 +209,6 @@ module.exports = {
       m: 0xFF0000,
       cs: true,
       rs: true,
-
       x: 30,
       z: -18,
     },
@@ -158,7 +217,6 @@ module.exports = {
       m: 0xFF0000,
       cs: true,
       rs: true,
-
       x: 30,
       z: -24,
     },
@@ -167,7 +225,6 @@ module.exports = {
       m: 0xFF0000,
       cs: true,
       rs: true,
-
       x: 30,
       z: -30,
     },
@@ -176,7 +233,6 @@ module.exports = {
       m: 0xFF0000,
       cs: true,
       rs: true,
-
       x: 30,
       z: -36,
     },
@@ -185,7 +241,6 @@ module.exports = {
       m: 0xFF0000,
       cs: true,
       rs: true,
-
       x: 30,
       z: -42,
     },

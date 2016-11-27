@@ -101,6 +101,7 @@ export default class App extends Component {
         object.receiveShadow = model.rs;
 
         object.position.set(model.x || 0, model.y || 0, model.z || 0);
+        object.rotation.set(model.rx || 0, model.ry || 0, model.rz || 0);
 
         scene.add(object);
       });
