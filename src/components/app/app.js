@@ -9,14 +9,18 @@ let controls;
 let scene;
 let renderer;
 let light;
+let shadowCamera;
 
 // Dat GUI
 let gui;
 let guiElements;
-const param = {color: '0xffffff'};
+let lightController;
 
 const clearGui = () => {
-  if ( gui ) gui.destroy();
+  if (gui) {
+    gui.destroy();
+  }
+
   gui = new dat.GUI();
   gui.open();
 }
@@ -24,67 +28,27 @@ const clearGui = () => {
 const buildGui = () => {
   clearGui();
 
-  addGui('light color', light.color.getHex(), val => {
-    light.color.setHex(val);
-    threeRender();
-  }, true);
+  const lightFolder = gui.addFolder('Light');
 
-  addGui('light intensity', light.intensity, val => {
-    light.intensity = val;
-    threeRender();
-  }, false, 0, 5);
+  lightController = {
+    color: light.color.getHex(),
+    intensity: light.intensity,
+    distance: light.distance,
+    decay: light.decay,
+    positionX: light.position.x,
+    positionY: light.position.y,
+    positionZ: light.position.z,
+  };
 
-  addGui('light distance', light.distance, val => {
-    light.distance = val;
-    threeRender();
-  }, false, 100, 500);
+  lightFolder.addColor(lightController, 'color', '0xffffff').name('Color').onChange(updateRender);
+  lightFolder.add(lightController, 'intensity', 0, 5, 0.01).name('Intensity').onChange(updateRender);
+  lightFolder.add(lightController, 'distance', 100, 500, 10).name('Distance').onChange(updateRender);
+  lightFolder.add(lightController, 'decay', 0, 10, 0.01).name('Decay').onChange(updateRender);
+  lightFolder.add(lightController, 'positionX', -80, 80, 0.1).name('x').onChange(updateRender);
+  lightFolder.add(lightController, 'positionY', 10, 80, 0.1).name('y').onChange(updateRender);
+  lightFolder.add(lightController, 'positionZ', -20, 80, 0.1).name('z').onChange(updateRender);
 
-  addGui('light decay', light.decay, val => {
-    light.decay = val;
-    threeRender();
-  }, false, 0, 10);
-
-  addGui('light x', light.position.x, val => {
-    light.position.x = val;
-    threeRender();
-  }, false, -80, 80);
-
-  addGui('light y', light.position.y, val => {
-    light.position.y = val;
-    threeRender();
-  }, false, -80, 80);
-
-  addGui('light z', light.position.z, val => {
-    light.position.z = val;
-    threeRender();
-  }, false, -80, 80);
-
-  addGui('fog density', scene.fog.density, val => {
-    scene.fog.density = val;
-    threeRender();
-  }, false, 0.01, 0.05);
-
-}
-
-const addGui = (name, value, callback, isColor, min, max) => {
-  let node;
-  param[name] = value;
-
-  if (isColor) {
-    node = gui.addColor(param, name).onChange(() => {
-      callback(param[name]);
-    });
-  } else if (typeof value == 'object') {
-    node = gui.add(param, name, value).onChange(() => {
-      callback(param[name]);
-    });
-  } else {
-    node = gui.add(param, name, min, max).onChange(() => {
-      callback(param[name]);
-    });
-  }
-
-  return node;
+  gui.add(scene.fog, 'density', 0.01, 0.05, 0.001).name('Fog');
 }
 
 const init = () => {
@@ -108,9 +72,9 @@ const init = () => {
 
   // Light.
   light = new THREE.SpotLight(0xffffff, 2);
-  light.position.set(10, 41, -42);
+  light.position.set(-37, 17, -5);
   light.castShadow = true;
-  light.angle = Math.PI / 4;
+  light.angle = Math.PI / 5;
   light.penumbra = 0.39;
   light.decay = 2;
   light.distance = 200;
@@ -122,14 +86,11 @@ const init = () => {
 
   // Enable shadow rendering.
   renderer.shadowMap.enabled = true;
-  renderer.shadowMapSoft = true;
-  renderer.shadowCameraNear = 3;
-  renderer.shadowCameraFar = camera.far;
-  renderer.shadowCameraFov = 50;
-  renderer.shadowMapBias = 0.0039;
-  renderer.shadowMapDarkness = 0.5;
-  renderer.shadowMapWidth = 1024;
-  renderer.shadowMapHeight = 1024;  
+  renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
+  // Shadow camera helper.
+  shadowCamera = new THREE.CameraHelper(light.shadow.camera);
+  scene.add(shadowCamera);
 
   // Stats.
   container.appendChild(stats.dom);
@@ -151,6 +112,21 @@ const animate = () => {
   controls.update(); // required if controls.enableDamping = true, or if controls.autoRotate = true
 
   stats.update();
+
+  threeRender();
+}
+
+const updateRender = () => {
+  light.color.setHex(lightController.color);
+  light.intensity = lightController.intensity;
+  light.distance = lightController.distance;
+  light.decay = lightController.decay;
+
+  light.position.set(
+    lightController.positionX,
+    lightController.positionY,
+    lightController.positionZ
+  );
 
   threeRender();
 }
