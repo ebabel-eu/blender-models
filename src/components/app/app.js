@@ -71,7 +71,7 @@ const init = () => {
   controls.enableZoom = true;
 
   // Light.
-  light = new THREE.SpotLight(0xffffff, 2);
+  light = new THREE.SpotLight(0xffffff, 1.2);
   light.position.set(-37, 17, -5);
   light.castShadow = true;
   light.angle = Math.PI / 5;
@@ -142,8 +142,9 @@ export default class App extends Component {
   componentDidMount() {
     data.models.map(model => {
       loader.load(model.g, (geometry, materials) => {
-        const material = new THREE.MeshPhongMaterial({
+        const material = new THREE.MeshLambertMaterial({
           color: model.m,
+          shading: THREE.FlatShading,
         });
 
         const object = new THREE.Mesh(geometry, material);
