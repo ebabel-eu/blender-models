@@ -1,3 +1,5 @@
+import * as C from '../../constants';
+
 // JSON data for all models: where to load their geometry and what their material is.
 // @g: geometry path.
 // @m: material color.
@@ -9,7 +11,7 @@ module.exports = {
     // Chessboard.
     {
       g: './models/chessboard.json',
-      m: 0xa0522d,
+      m: C.CHESSBOARD_COLOR,
       cs: true,
       rs: true,
     },
@@ -17,7 +19,7 @@ module.exports = {
     // Whites.
     {
       g: './models/rook.json',
-      m: 0xFFCC8A,
+      m: C.WHITE_PIECE_COLOR,
       cs: true,
       rs: false,
       x: -21,
@@ -25,7 +27,7 @@ module.exports = {
     },
     {
       g: './models/rook.json',
-      m: 0xFFCC8A,
+      m: C.WHITE_PIECE_COLOR,
       cs: true,
       rs: false,
       x: -21,
@@ -33,7 +35,7 @@ module.exports = {
     },
     {
       g: './models/knight.json',
-      m: 0xFFCC8A,
+      m: C.WHITE_PIECE_COLOR,
       cs: true,
       rs: false,
       x: -21,
@@ -42,7 +44,7 @@ module.exports = {
     },
     {
       g: './models/knight.json',
-      m: 0xFFCC8A,
+      m: C.WHITE_PIECE_COLOR,
       cs: true,
       rs: false,
       x: -21,
@@ -51,7 +53,7 @@ module.exports = {
     },
     {
       g: './models/bishop.json',
-      m: 0xFFCC8A,
+      m: C.WHITE_PIECE_COLOR,
       cs: true,
       rs: false,
       x: -21,
@@ -59,7 +61,7 @@ module.exports = {
     },
     {
       g: './models/bishop.json',
-      m: 0xFFCC8A,
+      m: C.WHITE_PIECE_COLOR,
       cs: true,
       rs: false,
       x: -21,
@@ -67,7 +69,7 @@ module.exports = {
     },
     {
       g: './models/king.json',
-      m: 0xFFCC8A,
+      m: C.WHITE_PIECE_COLOR,
       cs: true,
       rs: false,
       x: -21,
@@ -75,7 +77,7 @@ module.exports = {
     },
     {
       g: './models/queen.json',
-      m: 0xFFCC8A,
+      m: C.WHITE_PIECE_COLOR,
       cs: true,
       rs: false,
       x: -21,
@@ -83,7 +85,7 @@ module.exports = {
     },
     {
       g: './models/pawn.json',
-      m: 0xFFCC8A,
+      m: C.WHITE_PIECE_COLOR,
       cs: true,
       rs: false,
       x: -15,
@@ -91,7 +93,7 @@ module.exports = {
     },
     {
       g: './models/pawn.json',
-      m: 0xFFCC8A,
+      m: C.WHITE_PIECE_COLOR,
       cs: true,
       rs: false,
       x: -15,
@@ -99,7 +101,7 @@ module.exports = {
     },
     {
       g: './models/pawn.json',
-      m: 0xFFCC8A,
+      m: C.WHITE_PIECE_COLOR,
       cs: true,
       rs: false,
       x: -15,
@@ -107,7 +109,7 @@ module.exports = {
     },
     {
       g: './models/pawn.json',
-      m: 0xFFCC8A,
+      m: C.WHITE_PIECE_COLOR,
       cs: true,
       rs: false,
       x: -15,
@@ -115,7 +117,7 @@ module.exports = {
     },
     {
       g: './models/pawn.json',
-      m: 0xFFCC8A,
+      m: C.WHITE_PIECE_COLOR,
       cs: true,
       rs: false,
       x: -15,
@@ -123,7 +125,7 @@ module.exports = {
     },
     {
       g: './models/pawn.json',
-      m: 0xFFCC8A,
+      m: C.WHITE_PIECE_COLOR,
       cs: true,
       rs: false,
       x: -15,
@@ -131,7 +133,7 @@ module.exports = {
     },
     {
       g: './models/pawn.json',
-      m: 0xFFCC8A,
+      m: C.WHITE_PIECE_COLOR,
       cs: true,
       rs: false,
       x: -15,
@@ -139,7 +141,7 @@ module.exports = {
     },
     {
       g: './models/pawn.json',
-      m: 0xFFCC8A,
+      m: C.WHITE_PIECE_COLOR,
       cs: true,
       rs: false,
       x: -15,
@@ -149,7 +151,7 @@ module.exports = {
     // Blacks.
     {
       g: './models/rook.json',
-      m: 0x2E100D,
+      m: C.BLACK_PIECE_COLOR,
       cs: true,
       rs: false,
       x: 21,
@@ -157,7 +159,7 @@ module.exports = {
     },
     {
       g: './models/rook.json',
-      m: 0x2E100D,
+      m: C.BLACK_PIECE_COLOR,
       cs: true,
       rs: false,
       x: 21,
@@ -165,7 +167,7 @@ module.exports = {
     },
     {
       g: './models/knight.json',
-      m: 0x2E100D,
+      m: C.BLACK_PIECE_COLOR,
       cs: true,
       rs: false,
       x: 21,
@@ -174,7 +176,7 @@ module.exports = {
     },
     {
       g: './models/knight.json',
-      m: 0x2E100D,
+      m: C.BLACK_PIECE_COLOR,
       cs: true,
       rs: false,
       x: 21,
@@ -183,7 +185,7 @@ module.exports = {
     },
     {
       g: './models/bishop.json',
-      m: 0x2E100D,
+      m: C.BLACK_PIECE_COLOR,
       cs: true,
       rs: false,
       x: 21,
@@ -191,7 +193,7 @@ module.exports = {
     },
     {
       g: './models/bishop.json',
-      m: 0x2E100D,
+      m: C.BLACK_PIECE_COLOR,
       cs: true,
       rs: false,
       x: 21,
@@ -199,7 +201,7 @@ module.exports = {
     },
     {
       g: './models/king.json',
-      m: 0x2E100D,
+      m: C.BLACK_PIECE_COLOR,
       cs: true,
       rs: false,
       x: 21,
@@ -207,7 +209,7 @@ module.exports = {
     },
     {
       g: './models/queen.json',
-      m: 0x2E100D,
+      m: C.BLACK_PIECE_COLOR,
       cs: true,
       rs: false,
       x: 21,
@@ -215,7 +217,7 @@ module.exports = {
     },
     {
       g: './models/pawn.json',
-      m: 0x2E100D,
+      m: C.BLACK_PIECE_COLOR,
       cs: true,
       rs: false,
       x: 15,
@@ -223,7 +225,7 @@ module.exports = {
     },
     {
       g: './models/pawn.json',
-      m: 0x2E100D,
+      m: C.BLACK_PIECE_COLOR,
       cs: true,
       rs: false,
       x: 15,
@@ -231,7 +233,7 @@ module.exports = {
     },
     {
       g: './models/pawn.json',
-      m: 0x2E100D,
+      m: C.BLACK_PIECE_COLOR,
       cs: true,
       rs: false,
       x: 15,
@@ -239,7 +241,7 @@ module.exports = {
     },
     {
       g: './models/pawn.json',
-      m: 0x2E100D,
+      m: C.BLACK_PIECE_COLOR,
       cs: true,
       rs: false,
       x: 15,
@@ -247,7 +249,7 @@ module.exports = {
     },
     {
       g: './models/pawn.json',
-      m: 0x2E100D,
+      m: C.BLACK_PIECE_COLOR,
       cs: true,
       rs: false,
       x: 15,
@@ -255,7 +257,7 @@ module.exports = {
     },
     {
       g: './models/pawn.json',
-      m: 0x2E100D,
+      m: C.BLACK_PIECE_COLOR,
       cs: true,
       rs: false,
       x: 15,
@@ -263,7 +265,7 @@ module.exports = {
     },
     {
       g: './models/pawn.json',
-      m: 0x2E100D,
+      m: C.BLACK_PIECE_COLOR,
       cs: true,
       rs: false,
       x: 15,
@@ -271,7 +273,7 @@ module.exports = {
     },
     {
       g: './models/pawn.json',
-      m: 0x2E100D,
+      m: C.BLACK_PIECE_COLOR,
       cs: true,
       rs: false,
       x: 15,

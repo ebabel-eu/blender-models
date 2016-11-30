@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
 
+import Info from '../info/info';
+import data from './data';
+import * as C from '../../constants';
+
+
+// todo: refactor all the loose code.
 if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 
 const stats = new Stats();
@@ -40,20 +46,20 @@ const buildGui = () => {
     positionZ: light.position.z,
   };
 
-  lightFolder.addColor(lightController, 'color', '0xffffff').name('Color').onChange(updateRender);
-  lightFolder.add(lightController, 'intensity', 0, 5, 0.01).name('Intensity').onChange(updateRender);
-  lightFolder.add(lightController, 'distance', 100, 500, 10).name('Distance').onChange(updateRender);
-  lightFolder.add(lightController, 'decay', 0, 10, 0.01).name('Decay').onChange(updateRender);
-  lightFolder.add(lightController, 'positionX', -80, 80, 0.1).name('x').onChange(updateRender);
-  lightFolder.add(lightController, 'positionY', 10, 80, 0.1).name('y').onChange(updateRender);
-  lightFolder.add(lightController, 'positionZ', -20, 80, 0.1).name('z').onChange(updateRender);
+  lightFolder.addColor(lightController, 'color', C.LIGHT_COLOR).name('Color').onChange(updateLightColor);
+  lightFolder.add(lightController, 'intensity', 0, 5, 0.01).name('Intensity').onChange(updateLightIntensity);
+  lightFolder.add(lightController, 'distance', 100, 500, 10).name('Distance').onChange(updateLightDistance);
+  lightFolder.add(lightController, 'decay', 0, 10, 0.01).name('Decay').onChange(updateLightDecay);
+  lightFolder.add(lightController, 'positionX', -80, 80, 0.1).name('x').onChange(updateLightPosition);
+  lightFolder.add(lightController, 'positionY', 10, 80, 0.1).name('y').onChange(updateLightPosition);
+  lightFolder.add(lightController, 'positionZ', -20, 80, 0.1).name('z').onChange(updateLightPosition);
 
   gui.add(scene.fog, 'density', 0.01, 0.05, 0.001).name('Fog');
 }
 
 const init = () => {
   scene = new THREE.Scene();
-  scene.fog = new THREE.FogExp2(0x7ec0ee, 0.013);
+  scene.fog = new THREE.FogExp2(C.FOG_COLOR, C.FOG_DENSITY);
 
   renderer = new THREE.WebGLRenderer();
   renderer.setClearColor(scene.fog.color);
@@ -63,18 +69,26 @@ const init = () => {
   const container = document.getElementById('container');
   container.appendChild(renderer.domElement);
 
-  camera.position.z = 55;
+  camera.position.set(
+    C.CAMERA_POSITION.X,
+    C.CAMERA_POSITION.Y,
+    C.CAMERA_POSITION.Z,
+  );
 
   controls = new THREE.OrbitControls(camera, renderer.domElement);
   controls.enableDamping = true;
-  controls.dampingFactor = 0.25;
+  controls.dampingFactor = 0.75;
   controls.enableZoom = true;
 
   // Light.
-  light = new THREE.SpotLight(0xffffff, 1.2);
-  light.position.set(-55, 17, -5);
+  light = new THREE.SpotLight(C.LIGHT_COLOR, C.LIGHT_INTENSITY);
+  light.position.set(
+    C.LIGHT_POSITION.X,
+    C.LIGHT_POSITION.Y,
+    C.LIGHT_POSITION.Z,
+  );
   light.castShadow = true;
-  light.angle = Math.PI / 5;
+  light.angle = C.LIGHT_ANGLE;
   light.penumbra = 0.39;
   light.decay = 2;
   light.distance = 200;
@@ -116,12 +130,34 @@ const animate = () => {
   threeRender();
 }
 
-const updateRender = () => {
-  light.color.setHex(lightController.color);
-  light.intensity = lightController.intensity;
-  light.distance = lightController.distance;
-  light.decay = lightController.decay;
+const updateLightColor = () => {
+  let input = lightController.color;
 
+  switch (typeof input) {
+    case 'number':
+      light.color.setHex(input);
+      break;
+    case 'string':
+      light.color.setHex(input.replace('#', '0x'));
+      break;
+    default:
+      throw new Error('Unexpected color input.');
+  }
+}
+
+const updateLightIntensity = () => {
+  light.intensity = lightController.intensity;
+}
+
+const updateLightDistance = () => {
+  light.distance = lightController.distance;
+}
+
+const updateLightDecay = () => {
+  light.decay = lightController.decay;
+}
+
+const updateLightPosition = () => {
   light.position.set(
     lightController.positionX,
     lightController.positionY,
@@ -132,9 +168,6 @@ const updateRender = () => {
 const threeRender = () => {
   renderer.render(scene, camera);
 }
-
-import Info from '../info/info';
-import data from './data';
 
 export default class App extends Component {
   componentDidMount() {
