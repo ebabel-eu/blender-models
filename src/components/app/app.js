@@ -3,8 +3,7 @@ import React, { Component } from 'react';
 import * as C from '../../constants';
 import Info from '../info/info';
 import { Gui } from '../gui/gui';
-import data from './data';
-
+import Data from './data';
 
 // todo: refactor all the loose code.
 if (!Detector.webgl) {
@@ -96,33 +95,13 @@ const animate = () => {
   threeRender();
 }
 
-const updateLightIntensity = () => {
-  light.intensity = lightController.intensity;
-}
-
-const updateLightDistance = () => {
-  light.distance = lightController.distance;
-}
-
-const updateLightDecay = () => {
-  light.decay = lightController.decay;
-}
-
-const updateLightPosition = () => {
-  light.position.set(
-    lightController.positionX,
-    lightController.positionY,
-    lightController.positionZ
-  );
-}
-
 const threeRender = () => {
   renderer.render(scene, camera);
 }
 
 export default class App extends Component {
   componentDidMount() {
-    data.models.map(model => {
+    Data.models.map(model => {
       loader.load(model.g, (geometry, materials) => {
         const material = new THREE.MeshLambertMaterial({
           color: model.m,

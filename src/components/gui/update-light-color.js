@@ -1,3 +1,4 @@
+// Update the color of the light, which is a specially formated property, unlike the others.
 export const updateLightColor = (light, input) => {
   switch (typeof input) {
     case 'number':

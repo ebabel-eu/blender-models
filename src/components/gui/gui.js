@@ -1,6 +1,7 @@
 import * as C from '../../constants';
 import { clear } from './clear';
 import { updateLightColor } from './update-light-color';
+import { updateLight } from './update-light';
 
 export const Gui = (scene, light, gui) => {
   gui = clear(gui);
@@ -25,32 +26,32 @@ export const Gui = (scene, light, gui) => {
   lightFolder
     .add(lightController, 'intensity', 0, 5, 0.01)
     .name('Intensity')
-    .onChange(updateLightIntensity);
+    .onChange(input => updateLight(light, input, 'intensity'));
 
   lightFolder
     .add(lightController, 'distance', 100, 500, 10)
     .name('Distance')
-    .onChange(updateLightDistance);
+    .onChange(input => updateLight(light, input, 'distance'));
 
   lightFolder
     .add(lightController, 'decay', 0, 10, 0.01)
     .name('Decay')
-    .onChange(updateLightDecay);
+    .onChange(input => updateLight(light, input, 'decay'));
 
   lightFolder
     .add(lightController, 'positionX', -80, 80, 0.1)
     .name('x')
-    .onChange(updateLightPosition);
+    .onChange(input => updateLight(light.position, input, 'x'));
 
   lightFolder
     .add(lightController, 'positionY', 10, 80, 0.1)
     .name('y')
-    .onChange(updateLightPosition);
+    .onChange(input => updateLight(light.position, input, 'y'));
 
   lightFolder
     .add(lightController, 'positionZ', -20, 80, 0.1)
     .name('z')
-    .onChange(updateLightPosition);
+    .onChange(input => updateLight(light.position, input, 'z'));
 
   // Standalone gui control.
   gui
