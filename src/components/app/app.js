@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-import Info from '../info/info';
-import { clear } from '../gui/clear';
-import data from './data';
 import * as C from '../../constants';
+import Info from '../info/info';
+import { Gui } from '../gui/gui';
+import data from './data';
 
 
 // todo: refactor all the loose code.
@@ -21,34 +21,7 @@ let light;
 let shadowCamera;
 
 // Dat GUI
-let gui;
 let lightController;
-
-const buildGui = () => {
-  gui = clear(gui);
-
-  const lightFolder = gui.addFolder('Light');
-
-  lightController = {
-    color: light.color.getHex(),
-    intensity: light.intensity,
-    distance: light.distance,
-    decay: light.decay,
-    positionX: light.position.x,
-    positionY: light.position.y,
-    positionZ: light.position.z,
-  };
-
-  lightFolder.addColor(lightController, 'color', C.LIGHT_COLOR).name('Color').onChange(updateLightColor);
-  lightFolder.add(lightController, 'intensity', 0, 5, 0.01).name('Intensity').onChange(updateLightIntensity);
-  lightFolder.add(lightController, 'distance', 100, 500, 10).name('Distance').onChange(updateLightDistance);
-  lightFolder.add(lightController, 'decay', 0, 10, 0.01).name('Decay').onChange(updateLightDecay);
-  lightFolder.add(lightController, 'positionX', -80, 80, 0.1).name('x').onChange(updateLightPosition);
-  lightFolder.add(lightController, 'positionY', 10, 80, 0.1).name('y').onChange(updateLightPosition);
-  lightFolder.add(lightController, 'positionZ', -20, 80, 0.1).name('z').onChange(updateLightPosition);
-
-  gui.add(scene.fog, 'density', 0.01, 0.05, 0.001).name('Fog');
-}
 
 const init = () => {
   scene = new THREE.Scene();
@@ -123,21 +96,6 @@ const animate = () => {
   threeRender();
 }
 
-const updateLightColor = () => {
-  let input = lightController.color;
-
-  switch (typeof input) {
-    case 'number':
-      light.color.setHex(input);
-      break;
-    case 'string':
-      light.color.setHex(input.replace('#', '0x'));
-      break;
-    default:
-      throw new Error('Unexpected color input.');
-  }
-}
-
 const updateLightIntensity = () => {
   light.intensity = lightController.intensity;
 }
@@ -185,7 +143,8 @@ export default class App extends Component {
 
     init();
     animate();
-    buildGui();
+
+    lightController = Gui(scene, light);
   }
 
   render() {
