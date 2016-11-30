@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 
 import Info from '../info/info';
+import { clear } from '../gui/clear';
 import data from './data';
 import * as C from '../../constants';
 
 
 // todo: refactor all the loose code.
-if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
+if (!Detector.webgl) {
+  Detector.addGetWebGLMessage()
+};
 
 const stats = new Stats();
 const camera =  new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 1000);
@@ -22,17 +25,8 @@ let gui;
 let guiElements;
 let lightController;
 
-const clearGui = () => {
-  if (gui) {
-    gui.destroy();
-  }
-
-  gui = new dat.GUI();
-  gui.open();
-}
-
 const buildGui = () => {
-  clearGui();
+  gui = clear(gui);
 
   const lightFolder = gui.addFolder('Light');
 
