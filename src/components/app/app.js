@@ -53,7 +53,7 @@ const buildGui = () => {
 
 const init = () => {
   scene = new THREE.Scene();
-  scene.fog = new THREE.FogExp2(0x7ec0ee, 0.02);
+  scene.fog = new THREE.FogExp2(0x7ec0ee, 0.013);
 
   renderer = new THREE.WebGLRenderer();
   renderer.setClearColor(scene.fog.color);
@@ -72,7 +72,7 @@ const init = () => {
 
   // Light.
   light = new THREE.SpotLight(0xffffff, 1.2);
-  light.position.set(-37, 17, -5);
+  light.position.set(-55, 17, -5);
   light.castShadow = true;
   light.angle = Math.PI / 5;
   light.penumbra = 0.39;
@@ -127,8 +127,6 @@ const updateRender = () => {
     lightController.positionY,
     lightController.positionZ
   );
-
-  threeRender();
 }
 
 const threeRender = () => {
