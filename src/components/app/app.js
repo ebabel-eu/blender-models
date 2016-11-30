@@ -22,7 +22,6 @@ let shadowCamera;
 
 // Dat GUI
 let gui;
-let guiElements;
 let lightController;
 
 const buildGui = () => {
