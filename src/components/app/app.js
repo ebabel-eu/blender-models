@@ -3,12 +3,8 @@ import React, { Component } from 'react';
 import * as C from '../../constants';
 import Info from '../info/info';
 import { Gui } from '../gui/gui';
+import { WebglSupport } from '../webgl-support/webgl-support';
 import Data from './data';
-
-// todo: refactor all the loose code.
-if (!Detector.webgl) {
-  Detector.addGetWebGLMessage()
-};
 
 const stats = new Stats();
 const camera =  new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 1000);
@@ -82,25 +78,33 @@ const onWindowResize = () => {
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
 
+  console.log(`${window.innerWidth} x ${window.innerHeight}`);
+
   renderer.setSize(window.innerWidth, window.innerHeight);
 }
 
-const animate = () => {
-  requestAnimationFrame(animate);
-
-  controls.update(); // required if controls.enableDamping = true, or if controls.autoRotate = true
-
-  stats.update();
-
-  threeRender();
-}
-
-const threeRender = () => {
-  renderer.render(scene, camera);
-}
-
 export default class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.animate = this.animate.bind(this);
+  }
+
+  threeRender() {
+    renderer.render(scene, camera);
+  }
+
+  animate() {
+    requestAnimationFrame(this.animate);
+    controls.update(); // required if controls.enableDamping = true, or if controls.autoRotate = true
+    stats.update();
+
+    this.threeRender();
+  }
+
   componentDidMount() {
+    WebglSupport();
+
     Data.models.map(model => {
       loader.load(model.g, (geometry, materials) => {
         const material = new THREE.MeshLambertMaterial({
@@ -121,7 +125,7 @@ export default class App extends Component {
     });
 
     init();
-    animate();
+    this.animate();
 
     lightController = Gui(scene, light);
   }
