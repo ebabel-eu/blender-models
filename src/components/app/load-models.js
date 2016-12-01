@@ -1,10 +1,10 @@
 import Data from './data';
 
 export const LoadModels = scene => {
-  const loader = new THREE.JSONLoader();
+  const jsonLoader = new THREE.JSONLoader();
 
   Data.models.map(model => {
-    loader.load(model.g, (geometry, materials) => {
+    jsonLoader.load(model.g, (geometry, materials) => {
       const material = new THREE.MeshLambertMaterial({
         color: model.m,
         shading: THREE.FlatShading,

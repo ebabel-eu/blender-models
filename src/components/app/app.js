@@ -7,28 +7,28 @@ import { LoadModels } from './load-models';
 import { Gui } from '../gui/gui';
 import { WebglSupport } from '../webgl-support/webgl-support';
 
-const stats = new Stats();
-const camera =  new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 1000);
-const scene = new THREE.Scene();
-const renderer = new THREE.WebGLRenderer();
-const controls = new THREE.OrbitControls(camera, renderer.domElement);
-const light = new THREE.SpotLight(C.LIGHT_COLOR, C.LIGHT_INTENSITY);
-
 export default class App extends Component {
   constructor(props) {
     super(props);
+
+    this.stats = new Stats();
+    this.camera =  new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 1000);
+    this.scene = new THREE.Scene();
+    this.renderer = new THREE.WebGLRenderer();
+    this.controls = new THREE.OrbitControls(this.camera, this.renderer.domElement);
+    this.light = new THREE.SpotLight(C.LIGHT_COLOR, C.LIGHT_INTENSITY);
 
     this.animate = this.animate.bind(this);
   }
 
   threeRender() {
-    renderer.render(scene, camera);
+    this.renderer.render(this.scene, this.camera);
   }
 
   animate() {
     requestAnimationFrame(this.animate);
-    controls.update(); // required if controls.enableDamping = true, or if controls.autoRotate = true
-    stats.update();
+    this.controls.update(); // required if this.controls.enableDamping = true, or if this.controls.autoRotate = true
+    this.stats.update();
 
     this.threeRender();
   }
@@ -36,13 +36,13 @@ export default class App extends Component {
   componentDidMount() {
     WebglSupport();
 
-    Init(scene, renderer, camera, controls, light, stats);
+    Init(this.scene, this.renderer, this.camera, this.controls, this.light, this.stats);
 
-    LoadModels(scene);
+    LoadModels(this.scene);
 
     this.animate();
 
-    Gui(scene, light);
+    Gui(this.scene, this.light);
   }
 
   render() {
