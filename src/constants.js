@@ -33,3 +33,7 @@ export const CAMERA_POSITION = {
   Y: 12,
   Z: 55
 };
+
+// How long to wait before executing some code after the same event
+// has stopped being fired for a constant number of miliseconds.
+export const DEBOUNCE = 500;

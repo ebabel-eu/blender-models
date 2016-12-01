@@ -45,6 +45,7 @@
     "css-loader": "0.23.1",
     "dateformat": "1.0.12",
     "left-pad": "azer/left-pad",
+    "lodash.debounce": "4.0.8",
     "node-sass": "3.8.0",
     "promise-polyfill": "4.0.3",
     "react": "0.14.7",

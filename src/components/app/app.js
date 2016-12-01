@@ -4,6 +4,7 @@ import * as C from '../../constants';
 import Info from '../info/info';
 import { Gui } from '../gui/gui';
 import { WebglSupport } from '../webgl-support/webgl-support';
+import { OnWindowResize } from './on-window-resize';
 import Data from './data';
 
 const stats = new Stats();
@@ -71,16 +72,7 @@ const init = () => {
   container.appendChild(stats.dom);
 
   // Handle windows resize.
-  window.addEventListener('resize', onWindowResize, false);
-}
-
-const onWindowResize = () => {
-  camera.aspect = window.innerWidth / window.innerHeight;
-  camera.updateProjectionMatrix();
-
-  console.log(`${window.innerWidth} x ${window.innerHeight}`);
-
-  renderer.setSize(window.innerWidth, window.innerHeight);
+  window.addEventListener('resize', () => OnWindowResize(camera, renderer), false);
 }
 
 export default class App extends Component {
