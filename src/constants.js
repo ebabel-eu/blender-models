@@ -29,9 +29,9 @@ export const FOG_DENSITY = 0.013;
 
 // Camera.
 export const CAMERA_POSITION = {
-  X: 0,
-  Y: 12,
-  Z: 55
+  X: -30,
+  Y: 6,
+  Z: 0,
 };
 
 // How long to wait before executing some code after the same event

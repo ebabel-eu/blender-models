@@ -15,9 +15,6 @@ const renderer = new THREE.WebGLRenderer();
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
 const light = new THREE.SpotLight(C.LIGHT_COLOR, C.LIGHT_INTENSITY);
 
-// Dat GUI
-let lightController;
-
 export default class App extends Component {
   constructor(props) {
     super(props);
@@ -63,7 +60,7 @@ export default class App extends Component {
 
     this.animate();
 
-    lightController = Gui(scene, light);
+    Gui(scene, light);
   }
 
   render() {

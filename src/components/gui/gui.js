@@ -57,6 +57,4 @@ export const Gui = (scene, light, gui) => {
   gui
     .add(scene.fog, 'density', 0.01, 0.05, 0.001)
     .name('Fog');
-
-  return lightController;
 };
