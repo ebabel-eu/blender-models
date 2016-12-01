@@ -1,11 +1,10 @@
-export const OnWindowResize = (camera, renderer) => {
+import debounce from 'lodash.debounce';
+
+import * as C from '../../constants';
+
+export const OnWindowResize = debounce((camera, renderer) => {
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
 
-  console.log(`${window.innerWidth} x ${window.innerHeight}`);
-
   renderer.setSize(window.innerWidth, window.innerHeight);
-};
-
-//import debounce from 'lodash.debounce';
-//var debounce = require('lodash.debounce');
+}, C.DEBOUNCE);
