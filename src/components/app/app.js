@@ -3,13 +3,12 @@ import React, { Component } from 'react';
 import * as C from '../../constants';
 import Info from '../info/info';
 import { Init } from './init';
+import { LoadModels } from './load-models';
 import { Gui } from '../gui/gui';
 import { WebglSupport } from '../webgl-support/webgl-support';
-import Data from './data';
 
 const stats = new Stats();
 const camera =  new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 1000);
-const loader = new THREE.JSONLoader();
 const scene = new THREE.Scene();
 const renderer = new THREE.WebGLRenderer();
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
@@ -39,24 +38,7 @@ export default class App extends Component {
 
     Init(scene, renderer, camera, controls, light, stats);
 
-    Data.models.map(model => {
-      loader.load(model.g, (geometry, materials) => {
-        const material = new THREE.MeshLambertMaterial({
-          color: model.m,
-          shading: THREE.FlatShading,
-        });
-
-        const object = new THREE.Mesh(geometry, material);
-
-        object.position.set(model.x || 0, model.y || 0, model.z || 0);
-        object.rotation.set(model.rx || 0, model.ry || 0, model.rz || 0);
-
-        object.castShadow = model.cs;
-        object.receiveShadow = model.rs;
-
-        scene.add(object);
-      });
-    });
+    LoadModels(scene);
 
     this.animate();
 

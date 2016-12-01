@@ -30,7 +30,7 @@ export const FOG_DENSITY = 0.013;
 // Camera.
 export const CAMERA_POSITION = {
   X: -30,
-  Y: 6,
+  Y: 7,
   Z: 0,
 };
 
