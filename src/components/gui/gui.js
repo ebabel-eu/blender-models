@@ -49,7 +49,7 @@ export const Gui = (scene, light, gui) => {
     .onChange(input => updateLight(light.position, input, 'y'));
 
   lightFolder
-    .add(lightController, 'positionZ', -20, 80, 0.1)
+    .add(lightController, 'positionZ', -30, 80, 0.1)
     .name('z')
     .onChange(input => updateLight(light.position, input, 'z'));
 

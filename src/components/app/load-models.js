@@ -16,7 +16,7 @@ const uvTexture = (model, scene) => {
   textureLoader.load(
     model.t,
     texture => {
-      const material = new THREE.MeshPhongMaterial({
+      const material = new THREE.MeshLambertMaterial({
         shading: THREE.FlatShading,
         map: texture,
       });

@@ -15,12 +15,12 @@ export const BLACK_PIECE_COLOR = COLORS.EBONY;
 
 // Light.
 export const LIGHT_COLOR = COLORS.WHITE;
-export const LIGHT_INTENSITY = 1.7;
+export const LIGHT_INTENSITY = 1.65;
 export const LIGHT_ANGLE = Math.PI / 4;
 export const LIGHT_POSITION = {
-  X: -55,
-  Y: 17,
-  Z: -5,
+  X: -37.6,
+  Y: 25.4,
+  Z: -30,
 };
 
 // Fog.
