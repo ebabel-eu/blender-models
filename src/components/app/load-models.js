@@ -1,25 +1,48 @@
 import Data from './data';
 
-export const LoadModels = scene => {
-  const jsonLoader = new THREE.JSONLoader();
+const jsonLoader = new THREE.JSONLoader();
+const textureLoader = new THREE.TextureLoader();
 
-  Data.models.map(model => {
-    jsonLoader.load(model.g, (geometry, materials) => {
-      const material = new THREE.MeshLambertMaterial({
-        color: model.m,
+const plainMaterial = (model, scene) => {
+  const material = new THREE.MeshLambertMaterial({
+    color: model.m,
+    shading: THREE.FlatShading,
+  });
+
+  createMesh(material, model, scene);
+};
+
+const uvTexture = (model, scene) => {
+  textureLoader.load(
+    model.t,
+    texture => {
+      const material = new THREE.MeshPhongMaterial({
         shading: THREE.FlatShading,
+        map: texture,
       });
 
-      const mesh = new THREE.Mesh(geometry, material);
+      createMesh(material, model, scene);
+    },
+    xhr => console.log(`${model.t} ${xhr.loaded / xhr.total * 100}% loaded`),
+    xhr => console.error(`${model.t} failed to load.`),
+  );
+};
 
-      mesh.position.set(model.x || 0, model.y || 0, model.z || 0);
-      mesh.rotation.set(model.rx || 0, model.ry || 0, model.rz || 0);
-      mesh.scale.set(model.sx || 1, model.sy || 1, model.sz || 1);
+const createMesh = (material, model, scene) => {
+  jsonLoader.load(model.g, (geometry, materials) => {
+    const mesh = new THREE.Mesh(geometry, material);
 
-      mesh.castShadow = model.cs;
-      mesh.receiveShadow = model.rs;
+    mesh.position.set(model.x || 0, model.y || 0, model.z || 0);
+    mesh.rotation.set(model.rx || 0, model.ry || 0, model.rz || 0);
+    mesh.scale.set(model.sx || 1, model.sy || 1, model.sz || 1);
 
-      scene.add(mesh);
-    });
+    mesh.castShadow = model.cs;
+    mesh.receiveShadow = model.rs;
+
+    scene.add(mesh);
   });
 };
+
+export const LoadModels = scene =>
+  Data.models.map(model =>
+    model.t ? uvTexture(model, scene) : plainMaterial(model, scene));
