@@ -14,6 +14,11 @@ module.exports = {
       m: C.CHESSBOARD_COLOR,
       cs: true,
       rs: true,
+      x: 0,
+      y: -1.2,
+      sx: 6,
+      sy: 6,
+      sz: 6,
     },
 
     // Whites.

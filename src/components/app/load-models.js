@@ -10,15 +10,16 @@ export const LoadModels = scene => {
         shading: THREE.FlatShading,
       });
 
-      const object = new THREE.Mesh(geometry, material);
+      const mesh = new THREE.Mesh(geometry, material);
 
-      object.position.set(model.x || 0, model.y || 0, model.z || 0);
-      object.rotation.set(model.rx || 0, model.ry || 0, model.rz || 0);
+      mesh.position.set(model.x || 0, model.y || 0, model.z || 0);
+      mesh.rotation.set(model.rx || 0, model.ry || 0, model.rz || 0);
+      mesh.scale.set(model.sx || 1, model.sy || 1, model.sz || 1);
 
-      object.castShadow = model.cs;
-      object.receiveShadow = model.rs;
+      mesh.castShadow = model.cs;
+      mesh.receiveShadow = model.rs;
 
-      scene.add(object);
+      scene.add(mesh);
     });
   });
 };
