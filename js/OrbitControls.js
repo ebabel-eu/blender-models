@@ -326,7 +326,7 @@ THREE.OrbitControls = function ( object, domElement ) {
 
 			var element = scope.domElement === document ? scope.domElement.body : scope.domElement;
 
-			if ( scope.object instanceof THREE.PerspectiveCamera ) {
+			if ( scope.object.type === 'PerspectiveCamera' ) {
 
 				// perspective
 				var position = scope.object.position;
@@ -340,7 +340,7 @@ THREE.OrbitControls = function ( object, domElement ) {
 				panLeft( 2 * deltaX * targetDistance / element.clientHeight, scope.object.matrix );
 				panUp( 2 * deltaY * targetDistance / element.clientHeight, scope.object.matrix );
 
-			} else if ( scope.object instanceof THREE.OrthographicCamera ) {
+			} else if ( scope.object.type === 'OrthographicCamera' ) {
 
 				// orthographic
 				panLeft( deltaX * ( scope.object.right - scope.object.left ) / scope.object.zoom / element.clientWidth, scope.object.matrix );
