@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { PerspectiveCamera, Scene, WebGLRenderer, SpotLight } from 'three';
 
 import * as C from '../../constants';
 import Info from '../info/info';
@@ -12,11 +13,15 @@ export default class App extends Component {
     super(props);
 
     this.stats = new Stats();
-    this.camera =  new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 1000);
-    this.scene = new THREE.Scene();
-    this.renderer = new THREE.WebGLRenderer();
+    this.camera =  new PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 1000);
+    this.scene = new Scene();
+    this.renderer = new WebGLRenderer();
+
+    // Loading the legacy ES5 three.js library is only needed for this legacy OrbitControls.
+    // Either remove the need for OrbitControls or re-write it as an ES6 module.
     this.controls = new THREE.OrbitControls(this.camera, this.renderer.domElement);
-    this.light = new THREE.SpotLight(C.LIGHT_COLOR, C.LIGHT_INTENSITY);
+
+    this.light = new SpotLight(C.LIGHT_COLOR, C.LIGHT_INTENSITY);
 
     this.animate = this.animate.bind(this);
   }

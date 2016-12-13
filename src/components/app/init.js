@@ -1,8 +1,10 @@
+import { FogExp2, CameraHelper, PCFSoftShadowMap } from 'three';
+
 import * as C from '../../constants';
 import { OnWindowResize } from './on-window-resize';
 
 export const Init = (scene, renderer, camera, controls, light, stats) => {
-  scene.fog = new THREE.FogExp2(C.FOG_COLOR, C.FOG_DENSITY);
+  scene.fog = new FogExp2(C.FOG_COLOR, C.FOG_DENSITY);
 
   renderer.setClearColor(scene.fog.color);
   renderer.setPixelRatio(window.devicePixelRatio);
@@ -40,10 +42,10 @@ export const Init = (scene, renderer, camera, controls, light, stats) => {
 
   // Enable shadow rendering.
   renderer.shadowMap.enabled = true;
-  renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+  renderer.shadowMap.type = PCFSoftShadowMap;
 
   // Shadow camera helper.
-  const shadowCamera = new THREE.CameraHelper(light.shadow.camera);
+  const shadowCamera = new CameraHelper(light.shadow.camera);
   scene.add(shadowCamera);
 
   // Stats.

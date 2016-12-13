@@ -9,8 +9,13 @@
 	<body>
 		<div id="root"></div>
 
+		<!--
+    Loading the legacy ES5 three.js library is only needed for this legacy OrbitControls.
+    Either remove the need for OrbitControls or re-write it as an ES6 module.
+		-->
 		<script src="./js/three.js"></script>
 		<script src="./js/OrbitControls.js"></script>
+
 		<script src="./js/Detector.js"></script>
 		<script src="./js/stats.min.js"></script>
 		<script src="./js/dat.gui.min.js"></script>
